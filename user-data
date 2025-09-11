@@ -1,0 +1,5 @@
+#cloud-config
+user: debian
+password: debian
+chpasswd: { expire: False }
+ssh_pwauth: True
