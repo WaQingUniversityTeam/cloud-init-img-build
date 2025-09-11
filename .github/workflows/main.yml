@@ -1,0 +1,28 @@
+name: Build and Test with Cloud-Init
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+
+    - name: Install cloud-image-utils
+      run: sudo apt-get update && sudo apt-get install -y cloud-image-utils
+
+    - name: Generate cloud-init ISO
+      run: cloud-localds config.img user-data meta-data
+
+    - name: List files (for verification)
+      run: ls -la
+
+    - name: Upload cloud-init ISO as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: cloud-init-config
+        path: config.img
