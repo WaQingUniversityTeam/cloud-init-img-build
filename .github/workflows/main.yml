@@ -16,7 +16,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y cloud-image-utils
 
     - name: Generate cloud-init ISO
-      run: cloud-localds config.img user-data meta-data
+      run: cloud-localds config.img user-data.yaml
 
     - name: List files (for verification)
       run: ls -la
