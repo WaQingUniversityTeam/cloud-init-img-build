@@ -1,0 +1,8 @@
+#cloud-config
+hostname: zha
+manage_etc_hosts: true
+user: debian
+password: debian
+chpasswd:
+  expire: false
+ssh_pwauth: true
