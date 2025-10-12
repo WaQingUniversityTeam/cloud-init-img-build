@@ -21,7 +21,7 @@ jobs:
     - name: List files (for verification)
       run: ls -la
 
-    - name: Upload cloud-init ISO as artifact
+    - name: Upload cloud-init IMG as artifact
       uses: actions/upload-artifact@v4
       with:
         name: cloud-init-config
