@@ -1,8 +1,10 @@
 #cloud-config
-hostname: zha
-manage_etc_hosts: true
-user: cadaku
-password: 1145141919810
-ssh_pwauth: true
-chpasswd:
-  expire: false
+users:
+  - name: dd
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users
+    shell: /bin/bash
+    lock_passwd: false
+    passwd: dd
+
+hostname: ddd
