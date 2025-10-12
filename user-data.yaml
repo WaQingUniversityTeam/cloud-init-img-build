@@ -1,8 +1,8 @@
 #cloud-config
 hostname: zha
 manage_etc_hosts: true
-user: debian
-password: debian
+user: cadaku
+password: 1145141919810
 ssh_pwauth: true
 chpasswd:
   expire: false
