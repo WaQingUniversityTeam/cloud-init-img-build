@@ -1,15 +1,7 @@
 #cloud-config
-users:
-  - name: dd
-    sudo: ALL=(ALL) NOPASSWD:ALL
-    groups: users
-    shell: /bin/bash
-    lock_passwd: false
-    passwd: $6$lZ5Mc.YdrXnKvvrq$GTIEv6PvJUQlH33nNE80ImAaidSNxue70NM/FDH09fCgg4Zj0L9Uvtqw/NWj9LuWUFzWQGlSqnt2HEcNuzPaF.
-
-hostname: ddd
-
+user: debian
+password: debian
 chpasswd:
   expire: false
-  
 ssh_pwauth: true
+hostname: debian-cloud
